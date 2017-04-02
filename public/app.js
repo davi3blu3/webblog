@@ -4,10 +4,9 @@
         .controller("BlogController", BlogController);
 
     function BlogController($scope) {
-        $scope.createPost = createPost;
-
-        function createPost() {
-            console.log("create post event called!");
+        $scope.createPost = function (post) {
+            console.log("post.title: ", post.title);
+            console.log("post.body: ", post.body);            
         }
     }
 })();
