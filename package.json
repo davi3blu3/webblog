@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/davi3blu3/webblog/issues"
   },
-  "homepage": "https://github.com/davi3blu3/webblog#readme"
+  "homepage": "https://github.com/davi3blu3/webblog#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
