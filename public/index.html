@@ -9,14 +9,12 @@
 </head>
 <body>
     <div class="jumbotron">
-        <div class="container">
+        <div class="container" ng-controller="BlogController">
             <h1>MEAN Blog</h1>
-            <form action="post">
-                <input class="form-group form-control" placeholder="title" type="text">
-                <textarea class="form-group form-control" name="body" placeholder="body" id="" cols="30" rows="10"></textarea>
-                <button class="btn btn-primary">Post</button>
-            </form> 
-        </div>
+            <input class="form-group form-control" placeholder="title" type="text">
+            <textarea class="form-group form-control" name="body" placeholder="body" id="" cols="30" rows="10"></textarea>
+            <button ng-click="createPost()" class="btn btn-primary">Post</button>
+        </div> <!-- /ng-controller=BlogController -->
     </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <script src="app.js"></script>
