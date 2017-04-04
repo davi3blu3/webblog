@@ -4,10 +4,14 @@
         .controller("BlogController", BlogController);
 
     function BlogController($scope, $http) {
-        $scope.createPost = function (post) {
-            console.log("post.title: ", post.title);
-            console.log("post.body: ", post.body);   
-            $http.post("/api/blogpost", post);
+        $scope.createPost = function (post) {  
+            $http.post("/api/blogpost", post)
+                .then(function() {
+                    // Clear input fields
+                    $scope.post.title = "";
+                    $scope.post.body = "";
+                });
+
         }
     }
 })();
